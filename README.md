@@ -77,16 +77,9 @@ Edge-detection
   - Press ▶ Run  
   - Allow camera permissions when prompted  
 
-## 📸 Screenshots
- ```
-Reat time image
-```
-<img width="615" height="851" alt="image" src="https://github.com/user-attachments/assets/ef8ef0e2-a522-4371-984f-3e92b11637ac" />
+## 📸 Video which show the Real time rendering the image form phycial device with FPS
 
-```
-Edge view and Real time FPS
-```
-![WhatsApp Image 2025-11-13 at 21 46 49_7a82aab8](https://github.com/user-attachments/assets/b8015445-a9cd-4923-9354-7c954c54aea5)
+https://drive.google.com/file/d/1i7UA0GjRBK5bIRxcdEsRnpJYTB8xcJD2/view?usp=drive_link
 
 ## 🛠 Tech Stack
 
