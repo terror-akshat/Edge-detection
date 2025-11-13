@@ -1,0 +1,4 @@
+# ninja log v5
+13	7421	7847464009497960	CMakeFiles/edge_native.dir/ImageProcessor.cpp.o	b6b8e9dc7ad2ad
+1	7464	7847464009934871	CMakeFiles/edge_native.dir/native-lib.cpp.o	b2d66151097c01f2
+7464	8487	7847464019852775	C:/Users/Akshat Agarwal/AndroidStudioProjects/Edge/app/build/intermediates/cxx/Debug/48t6e5c2/obj/arm64-v8a/libedge_native.so	3ee913db5449648f

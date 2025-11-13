@@ -1,0 +1,3 @@
+C:/Users/Akshat Agarwal/AndroidStudioProjects/Edge/app/.cxx/Debug/48t6e5c2/arm64-v8a/CMakeFiles/edge_native.dir
+C:/Users/Akshat Agarwal/AndroidStudioProjects/Edge/app/.cxx/Debug/48t6e5c2/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Akshat Agarwal/AndroidStudioProjects/Edge/app/.cxx/Debug/48t6e5c2/arm64-v8a/CMakeFiles/rebuild_cache.dir
