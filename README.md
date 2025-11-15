@@ -29,8 +29,32 @@ EdgeViewer is an Android + native hybrid app that:
 - ⚡ **FPS Counter** | Live frame rate monitoring |
 - 🌐 **TypeScript Web Viewer** | Simple front-end to visualize frames or mock data
 
-### Web Viwer
+### Web Viewer Setup
 
+1. **Navigate to web directory**:
+   ```bash
+   cd web
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Build TypeScript**:
+   ```bash
+   npm run build
+   ```
+
+4. **Start server**:
+   ```bash
+   npm run serve
+   ```
+
+5. **Open browser**:
+   ```
+   http://localhost:8080
+   ```
 ---
 
 ## 📐 Architecture 
