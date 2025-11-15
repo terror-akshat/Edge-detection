@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time edge detection viewer for Android OpenCV processing">
+    <title>OpenCV Edge Detection Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎨 OpenCV Real-Time Viewer</h1>
+            <p class="subtitle">Edge Detection & Image Processing Dashboard</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Frame Display Area -->
+            <section class="frame-display">
+                <div class="frame-container">
+                    <canvas id="frameCanvas" width="640" height="480"></canvas>
+                    <div class="frame-overlay">
+                        <span id="frameLabel" class="frame-label">Raw Feed</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Panel -->
+            <aside class="stats-panel">
+                <h2>📊 Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">FPS</span>
+                        <span id="fps" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Resolution</span>
+                        <span id="resolution" class="stat-value">640x480</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Processing Time</span>
+                        <span id="processingTime" class="stat-value">0 ms</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Frame Count</span>
+                        <span id="frameCount" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Status</span>
+                        <span id="status" class="stat-value status-idle">Idle</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Connection</span>
+                        <span id="connection" class="stat-value status-disconnected">Disconnected</span>
+                    </div>
+                </div>
+
+                <!-- Connection Info -->
+                <div class="connection-info">
+                    <h3>🔌 WebSocket</h3>
+                    <input type="text" id="wsUrl" placeholder="ws://localhost:8765" value="ws://localhost:8765">
+                    <button id="connectBtn" class="btn btn-primary">Connect</button>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Controls -->
+        <section class="controls-panel">
+            <h2>🎮 Controls</h2>
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label>Processing Mode</label>
+                    <div class="button-group">
+                        <button id="rawBtn" class="btn btn-mode active" data-mode="raw">📷 Raw Feed</button>
+                        <button id="edgeBtn" class="btn btn-mode" data-mode="edge">🔲 Edge Detection</button>
+                        <button id="grayBtn" class="btn btn-mode" data-mode="gray">⬜ Grayscale</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <div class="button-group">
+                        <button id="playBtn" class="btn btn-success">▶️ Play Demo</button>
+                        <button id="pauseBtn" class="btn btn-warning" disabled>⏸️ Pause</button>
+                        <button id="resetBtn" class="btn btn-danger">🔄 Reset</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Demo Settings</label>
+                    <div class="slider-group">
+                        <label for="fpsSlider">Target FPS: <span id="fpsValue">15</span></label>
+                        <input type="range" id="fpsSlider" min="1" max="30" value="15">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Info -->
+        <section class="info-panel">
+            <h2>📐 Architecture Flow</h2>
+            <div class="architecture-flow">
+                <div class="flow-step">
+                    <span class="flow-icon">📸</span>
+                    <span class="flow-text">Camera Capture</span>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step">
+                    <span class="flow-icon">🔗</span>
+                    <span class="flow-text">JNI Bridge</span>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step">
+                    <span class="flow-icon">⚙️</span>
+                    <span class="flow-text">OpenCV C++</span>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step">
+                    <span class="flow-icon">🎨</span>
+                    <span class="flow-text">OpenGL ES</span>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step active">
+                    <span class="flow-icon">🌐</span>
+                    <span class="flow-text">Web Viewer</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with TypeScript + OpenCV + OpenGL ES | RnD Intern Assessment</p>
+            <p class="tech-stack">Tech Stack: Android NDK • JNI • OpenCV C++ • OpenGL ES 2.0 • TypeScript</p>
+        </footer>
+    </div>
+
+    <!-- Load compiled TypeScript -->
+    <script type="module" src="dist/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "opencv-viewer-web",
+  "version": "1.0.0",
+  "description": "TypeScript web viewer for real-time edge detection output from Android OpenCV app",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "http-server ./ -p 8080 -c-1",
+    "dev": "npm run build && npm run serve",
+    "clean": "rmdir /s /q dist 2>nul || rm -rf dist"
+  },
+  "keywords": [
+    "opencv",
+    "typescript",
+    "websocket",
+    "image-processing",
+    "edge-detection"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {}
+}
