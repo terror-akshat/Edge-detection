@@ -2,12 +2,6 @@
 
 > **Real-Time Edge Detection Viewer** - A complete implementation showcasing Android development, OpenCV C++ integration, OpenGL ES rendering, and TypeScript web viewer.
 
-## Demo Video
-
-```
-
-```
-
 ## 🎯 Overview
 
 EdgeViewer is an Android + native hybrid app that:  
@@ -29,33 +23,7 @@ EdgeViewer is an Android + native hybrid app that:
 - ⚡ **FPS Counter** | Live frame rate monitoring |
 - 🌐 **TypeScript Web Viewer** | Simple front-end to visualize frames or mock data
 
-### Web Viewer Setup
 
-1. **Navigate to web directory**:
-   ```bash
-   cd web
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Build TypeScript**:
-   ```bash
-   npm run build
-   ```
-
-4. **Start server**:
-   ```bash
-   npm run serve
-   ```
-
-5. **Open browser**:
-   ```
-   http://localhost:8080
-   ```
----
 
 ## 📐 Architecture 
 
@@ -103,9 +71,13 @@ EdgeViewer is an Android + native hybrid app that:
 - **JNI**: Native method implementation
 
 ### Web
+- **Language**: TypeScript 5.3.3
+- **Runtime**: ES2020 modules
+- **Server**: http-server
+- **Communication**: WebSocket API
+- **Rendering**: HTML5 Canvas
 
 ---
-
 ## 📁 Project Structure
 ```
 Edge-detection/
@@ -135,8 +107,20 @@ Edge-detection/
 │       └── fragment.glsl                   # Fragment shader (renders processed RGBA texture)
 │
 ├── opencv/                                 # OpenCV Android SDK (native libs + includes)
-│                                            # Contains OpenCV .so libraries, header files, configs
-│
+│                                           # Contains OpenCV .so libraries, header files, configs
+├── web/                                    # TypeScript web viewer
+│   ├── src/
+│   │   ├── app.ts                          # Main entry point
+│   │   ├── frameRenderer.ts                # Canvas rendering
+│   │   ├── statsDisplay.ts                 # Statistics
+│   │   ├── websocketClient.ts              # Network comm
+│   │   ├── types.ts                        # Type definitions
+│   │   └── demoData.ts                     # Sample frames
+│   ├── index.html                          # UI structure
+│   ├── styles.css                          # Styling
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── README.md
 ├── README.md                                # Project overview, setup steps, architecture details
 ├── .gitignore                               # Ignore build folders, Gradle, .idea, native libs
 └── LICENSE                                  # License for open-source submission
@@ -215,9 +199,40 @@ externalNativeBuild {
 - Press Run (▶)
 ---
 
-### 🔟 Running the App
+###  Running the App
 Once launched:
 - Camera preview starts immediately
 - FPS counter updates live
 ---
 
+## Web Viewer Setup
+
+1. **Navigate to web directory**:
+   ```bash
+   cd web
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Build TypeScript**:
+   ```bash
+   npm run build
+   ```
+
+4. **Start server**:
+   ```bash
+   npm run serve
+   ```
+
+5. **Open browser**:
+   ```
+   http://localhost:8080
+   ```
+---
+
+**Repository**: https://github.com/terror-akshat/Edge-detection
+
+**Contact**: [akshat.agarwal9292@gmail.com]
